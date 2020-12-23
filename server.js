@@ -106,6 +106,12 @@ app.get('/:id', (req, res) => {
   })
 })
 
+app.delete('/:id', (req, res) => {
+  Product.findByIdAndRemove(req.params.id, (error, data) => {
+    res.redirect('/')
+  })
+})
+
 
 app.listen(PORT, () => {
   console.log('Listening on port: ', PORT)

@@ -16,5 +16,8 @@
     Price: $<%=products.price%>
     In Stock: <%=products.qty%>
     </h4>
+    <form action="/<%=products._id%>?_method=DELETE" method="POST">
+      <input type="submit" value="Remove">
+    </form>
   </body>
 </html>
