@@ -95,6 +95,24 @@ app.get('/seed', (req, res) => {
   )
 })
 
+app.put('/:id', (req, res) => {
+  Product.findByIdAndUpdate(req.params.id, req.body, {new:true},
+  (error, updated) => {
+    res.redirect('/')
+  })
+})
+
+app.get('/:id/edit', (req, res) => {
+  Product.findById(req.params.id, (error, foundProduct) => {
+    res.render(
+      'edit.ejs',
+      {
+        products: foundProduct
+      }
+    )
+  })
+})
+
 app.get('/:id', (req, res) => {
   Product.findById(req.params.id, (error, foundProduct) => {
     res.render(
