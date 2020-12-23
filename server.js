@@ -55,12 +55,55 @@ app.get('/seed', (req, res) => {
         genre: 'Country',
         price: 25,
         qty: 4,
+      },
+      {
+        title: 'As Long as You Are',
+        artist: 'Future Islands',
+        img: 'https://media.pitchfork.com/photos/5f7e50e31efa8e109cd44dcc/1:1/w_320/as%20long%20as%20you%20are_future%20islands.jpg',
+        genre: 'Synthpop',
+        price: 32,
+        qty: 7,
+      },
+      {
+        title: 'The Complete 1956-57 Studio Sessions',
+        artist: 'Dizzy Gillespie',
+        img: 'https://arkivjazz.com/content/images/thumbs/0073533_complete-1956-57-studio-sessions-spa_550.jpeg',
+        genre: 'Jazz',
+        price: 39,
+        qty: 2,
+      },
+      {
+        title: "You're the Man",
+        artist: 'Marvin Gaye',
+        img: 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Marvin_Gaye_-_You%27re_the_Man.png/220px-Marvin_Gaye_-_You%27re_the_Man.png',
+        genre: 'Soul, Funk',
+        price: 32,
+        qty: 6,
+      },
+      {
+        title: 'Channel Orange',
+        artist: 'Frank Ocean',
+        img: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Channel_ORANGE.jpg/220px-Channel_ORANGE.jpg',
+        genre: 'Neo Soul',
+        price: 32,
+        qty: 4,
       }
     ],
     (error, data) => {
       res.redirect('/')
     }
   )
+})
+
+app.get('/:id', (req, res) => {
+  Product.findById(req.params.id, (error, foundProduct) => {
+    res.render(
+      'show.ejs',
+      {
+        products: foundProduct
+      }
+    )
+  })
 })
 
 

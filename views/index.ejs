@@ -7,7 +7,7 @@
   <body>
     <h1>Record Store</h1>
         <% for(let i = 0; i <products.length; i++) { %>
-            <a href="#">
+            <a href="/<%=products[i].id%>">
                 <%=products[i].title%>
                 <%=products[i].artist%>
                 <img src="<%=products[i].img%>" alt="">
