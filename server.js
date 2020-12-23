@@ -34,7 +34,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(methodOverride('_method'))
 
-app.get('/homepage', (req, res) => {
+app.get('/', (req, res) => {
   Product.find({}, (error, allProducts) => {
     res.render(
       'index.ejs',
@@ -45,7 +45,7 @@ app.get('/homepage', (req, res) => {
   })
 })
 
-app.get('/homepage/seed', (req, res) => {
+app.get('/seed', (req, res) => {
   Product.create(
     [
       {
@@ -58,7 +58,7 @@ app.get('/homepage/seed', (req, res) => {
       }
     ],
     (error, data) => {
-      res.redirect('/homepage')
+      res.redirect('/')
     }
   )
 })
