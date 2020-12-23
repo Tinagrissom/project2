@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Record Store</h1>
+        <% for(let i = 0; i <products.length; i++) { %>
+            <a href="#">
+                <%=products[i].title%>
+                <%=products[i].artist%>
+                <img src="<%=products[i].img%>" alt="">
+                <p>
+                  Price: $<%=products[i].price%>
+                  In Stock: <%=products[i].qty%>
+                </p>
+            </a>
+      <%  }  %>
+  </body>
+</html>
