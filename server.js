@@ -45,6 +45,16 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/new', (req, res) => {
+  res.render('new.ejs')
+})
+
+app.post('/', (req, res) => {
+  Product.create(req.body, (error, createdProduct) => {
+    res.redirect('/')
+  })
+})
+
 app.get('/seed', (req, res) => {
   Product.create(
     [
