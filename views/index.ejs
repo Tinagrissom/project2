@@ -3,19 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+    </style>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <h1>Record Store</h1>
+    <h1>The Record Shop</h1>
+      <div class="main">
+
         <% for(let i = 0; i <products.length; i++) { %>
-            <a href="/<%=products[i].id%>">
-                <%=products[i].title%>
-                <%=products[i].artist%>
-                <img src="<%=products[i].img%>" alt="">
+          <div class="container">
+            <div class="card">
                 <p>
-                  Price: $<%=products[i].price%>
+                <%=products[i].title%><br />
+                <%=products[i].artist%>
+                </p>
+                <a href="/<%=products[i].id%>">
+                <img src="<%=products[i].img%>" alt="">
+                </a>
+                <p>
+                  Price: $<%=products[i].price%><br />
                   In Stock: <%=products[i].qty%>
                 </p>
-            </a>
+
+            </div>
+          </div>
       <%  }  %>
+    </div>
+
   </body>
 </html>

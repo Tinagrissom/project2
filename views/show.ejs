@@ -3,22 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+    </style>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
     <h1>Show Page</h1>
     <a href="/">Back to Home</a>
-    <h3>
-    <%=products.title%>
-    <%=products.artist%>
-    </h3>
-    <img src="<%=products.img%>" alt="">
-    <h4>
-    Price: $<%=products.price%>
-    In Stock: <%=products.qty%>
-    </h4>
-    <form action="/<%=products._id%>?_method=DELETE" method="POST">
-      <input type="submit" value="Remove">
-    </form>
-    <a href="/<%=products._id%>/edit">Edit</a>
+      <div class="container">
+        <div class="card">
+          <h3>
+          <%=products.title%><br />
+          <%=products.artist%>
+          </h3>
+          <img src="<%=products.img%>" alt="">
+          <h4>
+          Price: $<%=products.price%><br />
+          In Stock: <%=products.qty%>
+          </h4>
+          <form action="/<%=products._id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Remove">
+          </form>
+          <a href="/<%=products._id%>/edit">Edit</a>
+      </div>
+    </div>
   </body>
 </html>
