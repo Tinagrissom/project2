@@ -4,6 +4,7 @@
 const express = require('express')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const session = require('express-session')
 const app = express()
 const Product = require('./models/products.js')
 //setting db as our connection
@@ -34,6 +35,18 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(methodOverride('_method'))
 
+
+const isAuthenticated = (req, res, next) => {
+  if(req.session.currentUser){
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
+
+//--------------
+// Index
+//-----------------
 app.get('/', (req, res) => {
   Product.find({}, (error, allProducts) => {
     res.render(
@@ -45,16 +58,39 @@ app.get('/', (req, res) => {
   })
 })
 
+//--------
+// New
+//--------
 app.get('/new', (req, res) => {
   res.render('new.ejs')
 })
 
+//-------
+// Edit
+//-----------
+app.get('/:id/edit', (req, res) => {
+  Product.findById(req.params.id, (error, foundProduct) => {
+    res.render(
+      'edit.ejs',
+      {
+        products: foundProduct
+      }
+    )
+  })
+})
+
+//----------------
+// Create
+//-----------------
 app.post('/', (req, res) => {
   Product.create(req.body, (error, createdProduct) => {
     res.redirect('/')
   })
 })
 
+//--------------
+// Seed Route
+//-----------------
 app.get('/seed', (req, res) => {
   Product.create(
     [
@@ -105,6 +141,9 @@ app.get('/seed', (req, res) => {
   )
 })
 
+//-----------------
+// Update
+//-----------------
 app.put('/:id', (req, res) => {
   Product.findByIdAndUpdate(req.params.id, req.body, {new:true},
   (error, updated) => {
@@ -112,17 +151,10 @@ app.put('/:id', (req, res) => {
   })
 })
 
-app.get('/:id/edit', (req, res) => {
-  Product.findById(req.params.id, (error, foundProduct) => {
-    res.render(
-      'edit.ejs',
-      {
-        products: foundProduct
-      }
-    )
-  })
-})
 
+//------------
+// Show
+//----------------
 app.get('/:id', (req, res) => {
   Product.findById(req.params.id, (error, foundProduct) => {
     res.render(
@@ -134,6 +166,9 @@ app.get('/:id', (req, res) => {
   })
 })
 
+//-------------
+// Delete
+//-------------
 app.delete('/:id', (req, res) => {
   Product.findByIdAndRemove(req.params.id, (error, data) => {
     res.redirect('/')
