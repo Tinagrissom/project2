@@ -4,24 +4,47 @@
     <%- include ('./partials/head.ejs') %>
   </head>
   <body>
-    <h1>Show Page</h1>
-    <a href="/">Back to Home</a>
-      <div class="container">
-        <div class="card">
-          <h3>
-          <%=products.title%><br />
-          <%=products.artist%>
-          </h3>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="users/new">Create Account</a></li>
+        <li><a href="/sessions/new">Log In</a></li>
+    </ul>
+    </nav>
+    <h1><%=products.title%><br>
+        <%=products.artist%>
+    </h1>
+    <div class="form">
+        <div class="record">
           <img src="<%=products.img%>" alt="">
+        </div>
+        <div class="details">
           <h4>
+          Genre: <%=products.genre%><br />
           Price: $<%=products.price%><br />
           In Stock: <%=products.qty%>
           </h4>
-          <form action="/<%=products._id%>?_method=DELETE" method="POST">
-            <input type="submit" value="Remove">
+          <form action="/<%=products.id%>/buy?_method=PUT" method="POST">
+            <%if(products.qty === 0){ %>
+              <p>OUT OF STOCK</p>
+            <% } else { %>
+              <input type="submit" value="Add to Cart">
+              <% } %>
           </form>
-          <a href="/<%=products._id%>/edit">Edit</a>
-      </div>
+        </div>
     </div>
+    <footer>
+    <nav>
+      <ul>
+          <form action="/<%=products._id%>?_method=DELETE" method="POST" class="remove">
+          <input type="submit" value="Remove" class="remove">
+          </form>
+        <li><a href="/<%=products._id%>/edit">Edit</a></li>
+        <li><a href=""><img src="https://www.flaticon.com/svg/static/icons/svg/60/60580.svg" class="social"></a></li>
+        <li><a href=""><img src="https://icon-library.net/images/instagram-icon-black-and-white-png/instagram-icon-black-and-white-png-9.jpg" class="social"></a></li>
+        <li><a href="/new">Create New Item</a></li>
+      </ul>
+    </nav>
+    </footer>
   </body>
 </html>

@@ -64,6 +64,15 @@ const isAuthenticated = (req, res, next) => {
   }
 }
 
+//-------------------
+// Buy
+//-----------------
+app.put('/:id/buy', (req, res) => {
+  Product.findByIdAndUpdate(req.params.id, { $inc: { qty: -1 } }, (error, data) => {
+    res.redirect('/')
+  })
+})
+
 //--------------
 // Index
 //-----------------

@@ -22,15 +22,22 @@ body{
   height: 40vw;
   margin: 50px auto;
   display: flex;
+  background-color: white
 }
 .sidebar{
   width: 50%;
   background-image: url("https://www.msk.org.au/wp-content/uploads/2018/08/records-1200x795.jpg")
 }
+.record{
+  width: 50%;
+}
 .register{
   width: 50%;
   box-sizing: border-box;
   padding: 15px;
+}
+.details{
+  width: 50%;
 }
 fieldset{
   border: 1px solid gold;
@@ -63,7 +70,32 @@ nav{
   justify-content: flex-end;
 }
 li{
+  display: flex;
+  align-items: center;
   padding: 10px;
   margin-right: 10px;
   background-color: gold
+}
+.remove{
+  border: none;
+  margin-right: 10px;
+  background-color: gold;
+  font-family: 'Source Code Pro';
+  font-size: 16px;
+}
+footer{
+  background-color: #DDE1EC;
+  margin-top: 0px;
+  padding-top: 20px
+}
+.cart{
+  padding: 10px;
+  margin-right: 10px;
+}
+.social{
+  width: 30px;
+  height: 30px;
+}
+.login{
+  background-color: #DDE1EC
 }
