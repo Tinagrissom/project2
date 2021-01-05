@@ -26,6 +26,13 @@ app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+)
 
 
 //--------------
@@ -46,6 +53,8 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 //---------------
 const userController = require('./controllers/users_controllers.js')
 app.use('/users', userController)
+const sessionsController = require('./controllers/sessions_controllers.js')
+app.use('/sessions', sessionsController)
 
 const isAuthenticated = (req, res, next) => {
   if(req.session.currentUser){
