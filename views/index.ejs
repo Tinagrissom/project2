@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
-    </style>
-    <link rel="stylesheet" href="/style.css">
+    <%- include ('./partials/head.ejs') %>
   </head>
   <body>
-    <li><a href="users/new">Create Account</a></li>
-    <li><a href="/sessions/new">Log In</a></li>
+    <nav>
+      <ul>
+        <li><a href="users/new">Create Account</a></li>
+        <li><a href="/sessions/new">Log In</a></li>
+    </ul>
+    </nav>
     <h1>The Record Shop</h1>
       <div class="main">
 
@@ -24,11 +23,6 @@
                 <a href="/<%=products[i].id%>">
                 <img src="<%=products[i].img%>" alt="">
                 </a>
-                <p>
-                  Price: $<%=products[i].price%><br />
-                  In Stock: <%=products[i].qty%>
-                </p>
-
             </div>
           </div>
       <%  }  %>

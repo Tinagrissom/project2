@@ -17,8 +17,53 @@ body{
   width: 240px;
   height: 350px;
 }
-
+.form{
+  width: 60vw;
+  height: 40vw;
+  margin: 50px auto;
+  display: flex;
+}
+.sidebar{
+  width: 50%;
+  background-image: url("https://www.msk.org.au/wp-content/uploads/2018/08/records-1200x795.jpg")
+}
+.register{
+  width: 50%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+fieldset{
+  border: 1px solid gold;
+  padding: 20px;
+  margin: 20px 0;
+}
+input{
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
 img{
   width: 200px;
   height: 200px;
+}
+.container>form{
+  padding: 30px;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  display: inline-flex;
+}
+nav{
+  background-color: #DDE1EC;
+  display: flex;
+  justify-content: flex-end;
+}
+li{
+  padding: 10px;
+  margin-right: 10px;
+  background-color: gold
 }
