@@ -14,5 +14,8 @@
     $("#popup-close").click(() => {
       $("#list-builder, #popup-box").hide();
     })
+    $("#button").click(() => {
+      $("#list-builder, #popup-box").hide();
+    })
     }
   })

@@ -144,6 +144,11 @@ footer{
   border: 10px solid #FFFFFF;
   display: none;
 }
+button{
+  padding: 10px;
+  font-family: 'Source Code Pro';
+  margin-top: 20px;
+}
 @media (max-width: 500px) {
   .main{
     display: flex;
