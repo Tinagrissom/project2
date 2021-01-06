@@ -4,14 +4,16 @@
     <%- include ('./partials/head.ejs') %>
   </head>
   <body>
-    <h1>New Product</h1>
+    <h1>Create a New Product</h1>
       <div class="container">
         <form action="/" method="POST">
           Title <input type="text" name="title"><br />
           Artist <input type="text" name="artist"><br />
+          Description <input type="text" name="description"><br />
           Genre <input type="text" name="genre"><br />
           Image <input type="text" name="img"><br />
           Price <input type="text" name="price"><br />
+          Our Price <input type="text" name="ours"
           In Stock <input type="text" name="qty"><br />
           <input type="submit" value="Add to Inventory">
         </form>

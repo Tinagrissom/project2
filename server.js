@@ -130,6 +130,7 @@ app.get('/seed', (req, res) => {
         description: "Here You Come Again is the nineteenth solo studio album by Dolly Parton. It was released on October 3, 1977, by RCA Victor. It was Parton's first album to be certified platinum by the Recording Industry Association of America, for shipping a million copies.",
         genre: 'Country',
         price: 25,
+        ours: 22,
         qty: 4,
       },
       {
@@ -139,6 +140,7 @@ app.get('/seed', (req, res) => {
         description: 'As Long as You Are is the sixth studio album by American synth-pop band Future Islands, released on October 9, 2020.',
         genre: 'Synthpop',
         price: 32,
+        ours: 28,
         qty: 7,
       },
       {
@@ -148,6 +150,7 @@ app.get('/seed', (req, res) => {
         description: 'Contains the complete original studio sessions Dizzy Gillespie made showcasing his wonderful big band of the mid-Fifties, which featured such talents as Quincy Jones, Lee Morgan, Joe Gordon, Melba Liston, Al Grey, Phil Woods, Benny Golson and Wynton Kelly.',
         genre: 'Jazz',
         price: 39,
+        ours: 37,
         qty: 2,
       },
       {
@@ -157,6 +160,7 @@ app.get('/seed', (req, res) => {
         description: "You're the Man is a posthumous studio album by American singer Marvin Gaye, originally intended to be released in 1972 as the follow-up to What's Going On.",
         genre: 'Soul, Funk',
         price: 32,
+        ours: 28,
         qty: 6,
       },
       {
@@ -166,6 +170,7 @@ app.get('/seed', (req, res) => {
         description: 'Channel Orange is the debut studio album by American R&B singer and songwriter Frank Ocean. It was released on July 10, 2012, by Def Jam Recordings.',
         genre: 'Neo Soul',
         price: 32,
+        ours: 29,
         qty: 4,
       },
       {
@@ -175,6 +180,7 @@ app.get('/seed', (req, res) => {
         description: 'Always on My Mind is the twenty-seventh studio album by country singer Willie Nelson. It was the Billboard number one country album of the year for 1982, and stayed 253 weeks on the Billboard Top Country',
         genre: 'Country',
         price: 27,
+        ours: 25,
         qty: 4,
       },
       {
@@ -184,6 +190,7 @@ app.get('/seed', (req, res) => {
         description: "The Big O is the fifteenth music album recorded by Roy Orbison, and according to Marcel Riesco's official Roy Orbison discography, his second for London Records in the United Kingdom.",
         genre: 'Rock and Roll',
         price: 25,
+        ours: 22,
         qty: 2,
       },
       {
@@ -193,6 +200,7 @@ app.get('/seed', (req, res) => {
         description: '3 Feet High and Rising is the debut studio album by American hip hop group De La Soul, released on March 3, 1989 by Tommy Boy Records.',
         genre: 'Hip Hop',
         price: 32,
+        ours: 28,
         qty: 3,
       },
       {
@@ -202,6 +210,7 @@ app.get('/seed', (req, res) => {
         description: 'RTJ4 is the fourth studio album by American hip hop duo Run the Jewels. It was released digitally through their own Jewel Runners imprint via BMG Rights Management on June 3, 2020, two days earlier than scheduled, with physical editions released in September 2020.',
         genre: 'Hip Hop',
         price: 39,
+        ours: 36,
         qty: 7,
       },
       {
@@ -211,6 +220,7 @@ app.get('/seed', (req, res) => {
         description: 'Jolene is the thirteenth solo studio album by Dolly Parton. It was released on February 4, 1974, by RCA Victor. The title track, "Jolene", tells the tale of a housewife confronting a beautiful seductress who she believes is having an affair with her husband.',
         genre: 'Counrty',
         price: 29,
+        ours: 27,
         qty: 4,
       },
       {
@@ -220,6 +230,7 @@ app.get('/seed', (req, res) => {
         description: 'Lemonade is the sixth solo studio album by American singer Beyoncé. It was released on April 23, 2016 by Parkwood Entertainment and Columbia Records, accompanied by a sixty-five-minute film of the same title on HBO.',
         genre: 'R&B',
         price: 36,
+        ours: 34,
         qty: 1,
       },
       {
@@ -229,6 +240,7 @@ app.get('/seed', (req, res) => {
         description: 'On the Water is the third album by synthpop band Future Islands. The album was released on 11 October 2011 on Thrill Jockey records. ',
         genre: 'Synthpop',
         price: 32,
+        ours: 28,
         qty: 6,
       },
       {
@@ -238,6 +250,7 @@ app.get('/seed', (req, res) => {
         description: 'A Love Supreme is an album by American jazz saxophonist John Coltrane. He recorded it in one session on December 9, 1964, at Van Gelder Studio in Englewood Cliffs, New Jersey, leading a quartet featuring pianist McCoy Tyner, bassist Jimmy Garrison, and drummer Elvin Jones. ',
         genre: 'Jazz',
         price: 42,
+        ours: 39,
         qty: 2,
       },
       {
@@ -247,6 +260,7 @@ app.get('/seed', (req, res) => {
         description: "Kind of Blue is a studio album by American jazz trumpeter Miles Davis. It was recorded on March 2 and April 22, 1959, at Columbia's 30th Street Studio in New York City, and released on August 17 of that year by Columbia Records.",
         genre: 'Jazz',
         price: 36,
+        ours: 32,
         qty: 5,
       },
       {
@@ -256,15 +270,17 @@ app.get('/seed', (req, res) => {
         description: "The legacy of Pink Floyd was not cemented with just The Dark Side of the Moon. The Wall is one of the greatest concept albums of all time. It tells the tale of Pink, a troubled young man raised by an overprotective mother, who is trying to break down the wall in his mind that has been constructed by the authoritative figures in his life.",
         genre: 'Rock & Roll',
         price: 27,
+        ours: 25,
         qty: 3,
       },
       {
         title: 'Bee Gees',
         artist: 'Saturday Night Fever',
         img: 'https://cdn.pastemagazine.com/www/articles/2018/08/21/sat-night-fever.jpg',
-        description: "https://cdn.pastemagazine.com/www/articles/2018/08/21/sat-night-fever.jpg",
+        description: "Saturday Night Fever is the soundtrack album from the 1977 film Saturday Night Fever starring John Travolta. The soundtrack was released on November 15, 1977.",
         genre: 'Disco',
         price: 32,
+        ours: 28,
         qty: 2,
       },
       {
@@ -274,6 +290,7 @@ app.get('/seed', (req, res) => {
         description: "Bob Marley was a populist hero if ever there was one, and songs like “Get Up, Stand Up,” with its simple, unaffected refrain, spoke in generalities about the need to assert oneself in the face of tyranny and oppression. ",
         genre: 'Reggae',
         price: 36,
+        ours: 32,
         qty: 5,
       },
       {
@@ -283,6 +300,7 @@ app.get('/seed', (req, res) => {
         description: "British alt-soul prodigy Adele Adkins’ debut, 19, was stunning in spots, earning both a watchful eye from critics and a should-have-been-huger hit single, “Chasing Pavements,” that perfectly demonstrates what makes her offbeat charm so appealing: a panache for gigantic hooks strung together in melismatic webs of old-school vigor; an instrumentally-dense arrangement equally referencing big-band and indie-rock; and most importantly—that voice. ",
         genre: 'Alt-Soul',
         price: 28,
+        ours: 25,
         qty: 1,
       },
       {
@@ -292,6 +310,7 @@ app.get('/seed', (req, res) => {
         description: "By 1977, hitmaking couple Lindsey Buckingham and Stevie Nicks had lost each other in a psychotropic haze. On Fleetwood Mac’s Rumours, that haze is thick enough to suck the air out of the room.",
         genre: 'Rock & Roll',
         price: 35,
+        ours: 32,
         qty: 2,
       },
       {
@@ -301,6 +320,7 @@ app.get('/seed', (req, res) => {
         description: "Incredibly, the Eagles first greatest-hits collection came out 10 months before the release of Hotel California, and now both reside among the best-selling albums ever. ",
         genre: 'Rock & Roll',
         price: 28,
+        ours: 25,
         qty: 3,
       },
       {
@@ -310,6 +330,7 @@ app.get('/seed', (req, res) => {
         description: "In Evening Air is the second album by synthpop band Future Islands. The album was released on 4 May 2010 on Thrill Jockey records. It is titled after a poem of the same name by Theodore Roethke from his final collection, The Far Field.",
         genre: 'Synthpop',
         price: 28,
+        ours: 25,
         qty: 3,
       },
       {
@@ -319,6 +340,7 @@ app.get('/seed', (req, res) => {
         description: "Gold Rush consists mainly of country folk music, along with the rocking Southern Man,[6] inspired by the Dean Stockwell-Herb Bermann screenplay After the Gold Rush.",
         genre: 'Folk Rock',
         price: 42,
+        ours: 38,
         qty: 3,
       },
       {
@@ -328,6 +350,7 @@ app.get('/seed', (req, res) => {
         description: "Blood on the Tracks is the fifteenth studio album by American singer-songwriter Bob Dylan, released on January 20, 1975[1][2] by Columbia Records. The album marked Dylan's return to Columbia Records after a two-album stint with Asylum Records. ",
         genre: 'Folk Rock',
         price: 38,
+        ours: 32,
         qty: 1,
       }
     ],

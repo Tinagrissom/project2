@@ -17,9 +17,11 @@
           <%=products.description%><br />
         </h3>
           <h4>
+          In Stock: <%=products.qty%><br />
           Genre: <%=products.genre%><br />
-          Price: $<%=products.price%><br />
-          In Stock: <%=products.qty%>
+          Our Price: $<%=products.ours%><br />
+          <span>Price: $<%=products.price%><span><br />
+
         </h4>
           <form action="/<%=products.id%>/buy?_method=PUT" method="POST">
             <%if(products.qty === 0){ %>

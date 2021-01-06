@@ -64,6 +64,9 @@ img{
 a{
   text-decoration: none;
 }
+span{
+  text-decoration: line-through;
+}
 ul{
   list-style: none;
   display: inline-flex;
