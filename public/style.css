@@ -4,6 +4,9 @@
 body{
   text-align: center;
   font-family: 'Source Code Pro', monospace;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
 }
 .main{
   display: flex;
@@ -80,6 +83,7 @@ li{
 .remove{
   border: none;
   margin-right: 10px;
+  padding: 0px;
   background-color: gold;
   font-family: 'Source Code Pro';
   font-size: 16px;
@@ -87,11 +91,15 @@ li{
 footer{
   background-color: #DDE1EC;
   margin-top: 0px;
-  padding-top: 20px
+  padding-top: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
 .cart{
-  padding: 10px;
-  margin-right: 10px;
+  padding-top: 10px;
+  margin-right: 15px;
 }
 .social{
   width: 30px;

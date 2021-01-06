@@ -1,10 +1,11 @@
 <nav>
   <ul>
+      <li><a href="/">Home</a></li>
       <% if(currentUser) { %>
         <li>Welcome, <%=currentUser.username%></li>
         <li>
             <form class="" action="/sessions?_method=DELETE" method="post">
-                <input type="submit" name="" value="Log Out">
+                <input type="submit" name="" value="Log Out" class="remove">
             </form>
         </li>
       <% } else { %>

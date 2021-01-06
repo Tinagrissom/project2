@@ -4,13 +4,7 @@
     <%- include ('./partials/head.ejs') %>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="users/new">Create Account</a></li>
-        <li><a href="/sessions/new">Log In</a></li>
-    </ul>
-    </nav>
+    <%- include ('./partials/nav.ejs') %>
     <h1><%=products.title%><br>
         <%=products.artist%>
     </h1>
