@@ -1,0 +1,16 @@
+<nav>
+  <ul>
+      <% if(currentUser) { %>
+        <li>Welcome, <%=currentUser.username%></li>
+        <li>
+            <form class="" action="/sessions?_method=DELETE" method="post">
+                <input type="submit" name="" value="Log Out">
+            </form>
+        </li>
+      <% } else { %>
+            <li><a href="users/new">Create Account</a></li>
+            <li><a href="/sessions/new">Log In</a> </li>
+      <% } %>
+        <a href="#"><img src="https://cdn.onlinewebfonts.com/svg/img_128446.png" class="social cart"></a>
+  </ul>
+</nav>

@@ -15,7 +15,7 @@ body{
   flex-direction: column;
   margin: 10px auto;
   width: 240px;
-  height: 350px;
+  height: 300px;
 }
 .form{
   width: 60vw;
@@ -29,6 +29,7 @@ body{
   background-image: url("https://www.msk.org.au/wp-content/uploads/2018/08/records-1200x795.jpg")
 }
 .record{
+  padding-top: 30px;
   width: 50%;
 }
 .register{
@@ -98,4 +99,7 @@ footer{
 }
 .login{
   background-color: #DDE1EC
+}
+.details{
+  text-align: left;
 }

@@ -82,8 +82,8 @@ app.get('/', (req, res) => {
       'index.ejs',
       {
         products: allProducts
-      }
-    )
+        ,currentUser: req.session.currentUser
+      })
   })
 })
 
@@ -280,14 +280,18 @@ app.put('/:id', (req, res) => {
 // Show
 //----------------
 app.get('/:id', (req, res) => {
+if(req.session.currentUser){
   Product.findById(req.params.id, (error, foundProduct) => {
     res.render(
       'show.ejs',
       {
         products: foundProduct
-      }
-    )
+        ,currentUser: req.session.currentUser
+      })
   })
+} else {
+  res.redirect('/sessions/new')
+  }
 })
 
 //-------------

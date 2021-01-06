@@ -19,12 +19,14 @@
           <img src="<%=products.img%>" alt="">
         </div>
         <div class="details">
-          <h4>
+          <h3>
           <%=products.description%><br />
+        </h3>
+          <h4>
           Genre: <%=products.genre%><br />
           Price: $<%=products.price%><br />
           In Stock: <%=products.qty%>
-          </h4>
+        </h4>
           <form action="/<%=products.id%>/buy?_method=PUT" method="POST">
             <%if(products.qty === 0){ %>
               <p>OUT OF STOCK</p>
