@@ -22,10 +22,10 @@ body{
 }
 .form{
   width: 60vw;
-  height: 40vw;
+  height: auto;
   margin: 50px auto;
   display: flex;
-  background-color: white
+  background-color: white;
 }
 .sidebar{
   width: 50%;
@@ -70,6 +70,7 @@ span{
 ul{
   list-style: none;
   display: inline-flex;
+  align-content: center;
 }
 nav{
   background-color: #DDE1EC;
@@ -149,6 +150,11 @@ button{
   font-family: 'Source Code Pro';
   margin-top: 20px;
 }
+.sub{
+  padding: 10px;
+  font-family: 'Source Code Pro';
+  margin-top: 20px;
+}
 @media (max-width: 500px) {
   .main{
     display: flex;
@@ -164,5 +170,17 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align:  center;
   }
+  nav{
+    display: flex;
+    flex-direction: column;
+  }
+  #popup-box{
+    max-width: 250px;
+  }
+  .register{
+    width: 80%;
+  }
+
 }
