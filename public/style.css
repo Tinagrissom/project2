@@ -77,6 +77,19 @@ nav{
   display: flex;
   justify-content: flex-end;
 }
+/* .formTags{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.formList{
+  width: 100%;
+}
+.formA{
+  width: 100%;
+  box-sizing: border-box;
+} */
 li{
   display: flex;
   align-items: center;
@@ -150,10 +163,7 @@ button{
   font-family: 'Source Code Pro';
   margin-top: 20px;
 }
-.sub{
-  padding: 10px;
-  font-family: 'Source Code Pro';
-  margin-top: 20px;
+
 }
 @media (max-width: 500px) {
   .main{
@@ -181,6 +191,9 @@ button{
   }
   .register{
     width: 80%;
+  }
+  a{
+    align-items: center;
   }
 
 }
